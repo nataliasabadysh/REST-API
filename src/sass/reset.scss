@@ -1,0 +1,12 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  width: 990px;
+  padding: 40px 0;
+}
+img{
+  max-width: 100%;
+}
+

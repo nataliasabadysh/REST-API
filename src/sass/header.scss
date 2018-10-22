@@ -1,0 +1,13 @@
+.header{
+  display: flex;
+  justify-content: flex-end;
+  a{
+    text-decoration: none;
+    color: $perple;
+    &::before {
+      content: '\2605';
+      margin-right: .5rem;
+      font-size: 1.4rem;
+    }
+  }
+}
