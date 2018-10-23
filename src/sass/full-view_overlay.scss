@@ -1,0 +1,53 @@
+.images-overlay {
+    display: none;
+    padding-bottom: 70px;
+    position: absolute;
+    top: 338px;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: repeat;
+    background-image: url("../img/overlay_bg.png");
+    z-index: 999;
+}
+
+.images-overlay__img {
+    display: block;
+    margin: 0 auto;
+}
+
+.images-overlay__controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto 0;
+    padding: 12px;
+    width: 114px;
+    background-color: #673ab7;
+    border-radius: 20px;
+}
+
+.images-overlay__controls button {
+    margin: 0;
+    padding: 0;
+    height: 12px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.images-overlay__controls button:hover {
+    opacity: 0.8;
+}
+
+.images-overlay__controls button img {
+    height: 12px;
+}
+
+.images-overlay__controls button:nth-child(2) {
+    margin-left: -8px;
+}
+
+.main.show_images-overlay .images-overlay {
+    display: block;
+}
