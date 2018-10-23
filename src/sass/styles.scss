@@ -1,6 +1,9 @@
 @import './vars.scss';
 @import './reset.scss';
 @import './header.scss';
+@import './loader.scss';
+@import './grid-item.scss';
+
 
 .main{
   margin-top: 50px;
@@ -32,21 +35,17 @@
       outline: none;
     }
   }
-  .img-items{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    .item{
-      padding: 10px;
+  .load-more {
+    display: none;
+    &.visible {
+      color: $color-font-white;
+      outline: none;
+      background-color: $yellow;
+      border-radius: 1.2em;
+      height: 2.2em;
+      margin: 0 auto;
+      display: block;
+      text-transform: uppercase;
     }
-  }
-  .button .btn{
-    color: $color-font-white;
-    outline: none;
-    background-color: $yellow;
-    border-radius: 1.2em;
-    height: 2.2em;
-    margin: 0 auto;
-    display: block;
-    text-transform: uppercase;
   }
 }

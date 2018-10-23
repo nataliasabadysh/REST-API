@@ -8,7 +8,7 @@
   <title>Team Project</title>
 </head>
 
-<body>
+<body class="page">
 
   <header class="header">
     <!--favorites-->
@@ -26,46 +26,32 @@
       <img src="../src/img/logo.png" alt="Logo for source picture">
     </picture>
 
-    <!--form-->
-    <form class="form">
-      <input type="text" class="input-source" placeholder="Введите название картинки" autofocus>
-      <button class="btn">поиск</button>
-    </form>
+  <!-- SEARCH FORM -->
 
-    <div class="img-items">  <!--img будем вешать картинки -->
+  <form class="form">
+   <input type="text" class="input-source input-js" placeholder="Введите название картинки" autofocus>   <!--input-->
+    <button type="submit" class="btn">Поиск</button>
+  </form>
 
-      <!--at the moment this is plasholder img -->
-
-      <div class="item">
-        <img src="../src/img/1.jpg" alt="image" width="210" height="120">
-      </div>
-      <div class="item">
-        <img src="../src/img/1.jpg" alt="image"  width="210" height="120">
-      </div>
-      <div class="item">
-        <img src="../src/img/1.jpg" alt="image"  width="210" height="120">
-      </div>
-      <div class="item">
-        <img src="../src/img/1.jpg" alt="image"  width="210" height="120">
-      </div>
-      <div class="item">
-        <img src="../src/img/1.jpg" alt="image"  width="210" height="120">
-      </div>
-      <div class="item">
-        <img src="../src/img/1.jpg" alt="image"  width="210" height="120">
-      </div>
-      <div class="item">
-        <img src="../src/img/1.jpg" alt="image" width="210" height="120">
-      </div>
-    </div>
-  <div class="button">
-    <button class="btn">показать еще</button>
-  </div>
-
+  <!-- IMAGE GRID -->
+  <main class="main">
+    <div class="grid"></div>
+    <button class="load-more button">Показать еще</button>
+  </main>
 
     <!--modal-->
 
 
+
+  <!-- LOADER -->
+
+  <div class="loader-overlay">
+    <div class="loader">
+      <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+      </svg>
+    </div>
+  </div>
 
   </main>
 
