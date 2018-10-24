@@ -1,8 +1,11 @@
 import './sass/styles.scss';
 
-
 import { fetchImages } from './services/api';
 import gridItemTpl from './templates/gallery-template.hbs';
+
+
+
+// start API URL
 
 const grid = document.querySelector('.grid');
 const form = document.querySelector('.form');
@@ -10,14 +13,12 @@ const input = document.querySelector('.input-js');
 const loader = document.querySelector('.loader-overlay');
 const loadMoreBtn = document.querySelector('.load-more');
 
-
 let currentPage = 1;
 let currentQuery = '';
 
 form.addEventListener('submit', handleFormSumit);
 loadMoreBtn.addEventListener('click', hanelLoadMoreClick);
 
-// submit
 function handleFormSumit(e) {
     e.preventDefault();
 
@@ -68,10 +69,35 @@ function updatePhotosGrid(markup) {
     grid.insertAdjacentHTML('beforeend', markup);
 }
 
-// loader
+// loader doesn't work
 function toggleLoader() {
     return loader.classList.toggle('show-loader');
 }
+// end API URL
 
+// MODAL START
+
+const page = document.querySelector('.page-modal');
+const openModalBtn = document.querySelector('.grid'); // нужно брать target у grid
+const closeModalBtn = document.querySelector('button[data-action="close-modal"]');
+
+openModalBtn.addEventListener('click', handleOpenModal);
+function handleOpenModal() {
+    page.classList.add('show-modal');
+    window.addEventListener('keydown', handleModalEscPress);
+}
+closeModalBtn.addEventListener('click', handleCloseModal);
+function handleCloseModal() {
+    page.classList.remove('show-modal');
+    window.removeEventListener('keydown', handleModalEscPress);
+}
+function handleModalEscPress(evt) {
+    const key = evt.code;
+    if(key === "Escape"){
+        handleCloseModal();
+    }
+}
+
+// MODAL END
 
 

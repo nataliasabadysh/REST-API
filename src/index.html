@@ -2,58 +2,64 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Team Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Team Project</title>
 </head>
 
-<body class="page">
+<body>
 
-  <header class="header">
-    <!--favorites-->
-    <div class="favorites">
-      <a href="#">Избранные</a>
-    </div>
-  </header>
-<main class="main">
+    <header class="header">
+        <!--favorites-->
+        <div class="favorites">
+            <a href="#">Избранные</a>
+        </div>
+    </header>
+    <main class="main page-modal">
 
-    <!--logo-->
-    <picture>
-      <source media="(max-width: 479px)" srcset="../src/img/logo.png 1x,../src/img/logo@2x.png 2x">
-      <source media="(min-width: 480px)" srcset="../src/img/logo.png 1x,../src/img/logo@2x.png 2x">
-      <source media="(min-width: 768px)" srcset="../src/img/logo.png 1x,../src/img/logo@2x.png 2x">
-      <img src="../src/img/logo.png" alt="Logo for source picture">
-    </picture>
+        <!--logo-->
+        <picture>
+            <source media="(max-width: 479px)" srcset="../src/img/logo.png 1x,../src/img/logo@2x.png 2x">
+            <source media="(min-width: 480px)" srcset="../src/img/logo.png 1x,../src/img/logo@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="../src/img/logo.png 1x,../src/img/logo@2x.png 2x">
+            <img src="../src/img/logo.png" alt="Logo for source picture">
+        </picture>
 
-  <!-- SEARCH FORM -->
+        <!-- SEARCH FORM -->
 
-  <form class="form">
-   <input type="text" class="input-source input-js" placeholder="Введите название картинки" autofocus>   <!--input-->
-    <button type="submit" class="btn">Поиск</button>
-  </form>
+        <form class="form">
+            <input type="text" class="input-source input-js" placeholder="Введите название картинки" autofocus>
+            <!--input-->
+            <button type="submit" class="btn">Поиск</button>
+        </form>
 
-  <!-- IMAGE GRID -->
-  <main class="main">
-    <div class="grid"></div>
-    <button class="load-more button">Показать еще</button>
-  </main>
+        <!-- IMAGE GRID -->
+            <div class="grid"></div>
+            <button class="load-more button">Показать еще</button>
 
-    <!--modal-->
+        <!--modal-->
+        <div class="backdrop">
+            <div class="modal">
+                <img src="../src/img/1.jpg" alt="enlarged foto" width="700px">
+                <div class="actions">
+                        <button class="button" data-next ="next"> < </button>
+                        <button class="button" data-prev ="prev"> > </button>
+                        <button class="button" data-faverite ="prev"> ★ </button>
+                        <button class="button" data-action="close-modal"> X </button>
+                </div>
+            </div>
+        </div>
+        <!-- LOADER -->
 
+        <div class="loader-overlay">
+            <div class="loader">
+                <svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+        </div>
 
-
-  <!-- LOADER -->
-
-  <div class="loader-overlay">
-    <div class="loader">
-      <svg class="circular" viewBox="25 25 50 50">
-        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-      </svg>
-    </div>
-  </div>
-
-  </main>
+    </main>
 
 </body>
 
