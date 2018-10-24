@@ -10,8 +10,9 @@ import gridItemTpl from './templates/gallery-template.hbs';
 const grid = document.querySelector('.grid');
 const form = document.querySelector('.form');
 const input = document.querySelector('.input-js');
-const loader = document.querySelector('.loader-overlay');
+const pageLoader = document.querySelector('.page');
 const loadMoreBtn = document.querySelector('.load-more');
+
 
 let currentPage = 1;
 let currentQuery = '';
@@ -68,17 +69,15 @@ function createGridItems(items) {
 function updatePhotosGrid(markup) {
     grid.insertAdjacentHTML('beforeend', markup);
 }
-
-// loader doesn't work
 function toggleLoader() {
-    return loader.classList.toggle('show-loader');
+     pageLoader.classList.toggle('show-loader');
 }
 // end API URL
 
 // MODAL START
 
 const page = document.querySelector('.page-modal');
-const openModalBtn = document.querySelector('.grid'); // нужно брать target у grid
+const openModalBtn = document.querySelector('.grid'); // нужно брать target у
 const closeModalBtn = document.querySelector('button[data-action="close-modal"]');
 
 openModalBtn.addEventListener('click', handleOpenModal);
