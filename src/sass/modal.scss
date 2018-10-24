@@ -1,12 +1,20 @@
 .page-modal.show-modal .backdrop {
     display: flex;
 }
-.actions{
-    border-radius: 50%;
-    width: 140px;
+//.actions{
+//    border-radius: 50%;
+//}
+.modal-icons{
+    width: 167px;
+    padding: 10px 20px;
+    justify-content: space-around;
+    display: flex;
+    background-color: #672cbd;
+    border-radius: 22px;
+    margin-top: 14px;
 }
 .actions button{
-    padding: 6px 15px;
+    padding: 0;
     border: none;
     font-size: 16px;
     color: #fff;
