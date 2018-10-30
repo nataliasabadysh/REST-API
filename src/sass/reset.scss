@@ -3,7 +3,7 @@
 }
 body {
   margin: 0 auto;
-  width: 990px;
+  width: 960px;
   padding: 40px 0;
 }
 img {
@@ -11,4 +11,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+button:focus {
+  outline: none;
+}
+
 

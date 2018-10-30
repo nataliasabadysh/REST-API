@@ -2,50 +2,8 @@
 @import './reset.scss';
 @import './header.scss';
 @import './loader.scss';
-@import './grid-item.scss';
 @import './modal.scss';
+@import './main.scss';
+@import './grid.scss';
 
-.main {
-    margin-top: 50px;
-    picture {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 40px;
-    }
-    .form {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-        .input-source {
-            width: 350px;
-            margin-right: .875rem;
-            padding: 0.5em 1.5em;
-            border-radius: 0.812rem;
-            border: 2px solid $border-color;
-            outline: none;
-        }
-        .btn {
-            border-radius: 0.812rem;
-            font-size: 14px;
-            height: 1.625rem;
-            font-family: Comfortaa, Roboto, sans-serif;
-            line-height: 1.5;
-            background-color: $yellow;
-            color: $color-font-white;
-            outline: none;
-        }
-    }
-    .load-more {
-        display: none;
-        &.visible {
-            color: $color-font-white;
-            outline: none;
-            background-color: $yellow;
-            border-radius: 1.2em;
-            height: 2.2em;
-            margin: 0 auto;
-            display: block;
-            text-transform: uppercase;
-        }
-    }
-}
+

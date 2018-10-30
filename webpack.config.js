@@ -4,16 +4,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: ['babel-polyfill', './src/index.js'],
+  entry: {
+    main: './src/index.js',
+  },
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: '',
   },
-
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader',
@@ -25,15 +25,25 @@ module.exports = {
           'style-loader',
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'postcss-loader',
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              plugins: (loader) => [
+                require('autoprefixer')({
+                  browsers: ['defaults']
+                })
+              ]
+            }
+          },
+          // 'postcss-loader',
           'sass-loader',
         ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         exclude: /node_modules/,
-        use: [
-          {
+        use: [{
             loader: 'url-loader',
             options: {
               name: '[name].[ext]',
@@ -41,7 +51,6 @@ module.exports = {
               limit: 10000,
             },
           },
-
           'img-loader',
         ],
       },
@@ -52,10 +61,8 @@ module.exports = {
       },
     ],
   },
-
   plugins: [
     new CleanWebpackPlugin('build'),
-
     new MiniCssExtractPlugin({
       filename: 'styles.css',
     }),
@@ -65,7 +72,6 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-
   devServer: {
     publicPath: '/',
     historyApiFallback: true,
@@ -74,6 +80,6 @@ module.exports = {
     stats: 'errors-only',
     clientLogLevel: 'warning',
     compress: true,
-    port: 9019,
+    port: 9001,
   },
 };

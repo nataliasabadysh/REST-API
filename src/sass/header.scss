@@ -1,6 +1,6 @@
 .header{
   display: flex;
-  justify-content: flex-end;
+	justify-content: flex-end;
   a{
     text-decoration: none;
     color: $perple;
@@ -8,6 +8,14 @@
       content: '\2605';
       margin-right: .5rem;
       font-size: 1.4rem;
+    }
+  }
+  @media(max-width: 640px) {
+    a{
+      font-size: 2.4rem;
+    &::before {
+      font-size: 2.4rem;
+    }
     }
   }
 }
