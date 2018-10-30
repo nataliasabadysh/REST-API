@@ -263,7 +263,7 @@ button:focus {
   .grid__item img {
     height: 180px; } }
 
-@media (max-width: 640px) {
+@media (min-width: 640px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
