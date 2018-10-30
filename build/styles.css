@@ -228,8 +228,7 @@ button:focus {
       border-radius: 1.2em;
       height: 2.2em;
       margin: 0 auto;
-      display: block;
-      text-transform: uppercase; }
+      display: block; }
     .main .grid__load-more:hover {
       cursor: pointer; }
 
