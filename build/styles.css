@@ -25,10 +25,10 @@ button:focus {
       margin-right: .5rem;
       font-size: 1.4rem; }
   @media (max-width: 640px) {
-    .header a {
-      font-size: 2.4rem; }
-      .header a::before {
-        font-size: 2.4rem; } }
+    .header .favorites {
+      padding-right: 30px; }
+    .header a, .header::before {
+      font-size: 24px; } }
 
 .loader-overlay {
   display: none;
@@ -211,7 +211,7 @@ button:focus {
       outline: none; }
     .main .form__btn {
       border-radius: 0.812rem;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 22px;
       font-family: Comfortaa, Roboto, sans-serif;
       background-color: #cddc39;

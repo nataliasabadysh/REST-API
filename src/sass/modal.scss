@@ -1,14 +1,11 @@
 .page-modal.show-modal .backdrop {
 	display: flex;
 }
-
 .page-modal {
-
 	&__actions {
 		display: flex;
 		margin: 0 auto;
 		justify-content: center;
-
 		& button {
 			padding: 0;
 			border: none;
@@ -17,7 +14,6 @@
 			background-color: #6734ba;
 			cursor: pointer;
 			font-weight: 700;
-
 			&:hover {
 				color: #eeed11;
 			}
