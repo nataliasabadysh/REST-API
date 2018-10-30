@@ -211,9 +211,8 @@ button:focus {
       outline: none; }
     .main .form__btn {
       border-radius: 0.812rem;
-      font-size: 12px;
-      height: 26px;
-      width: 63px;
+      font-size: 14px;
+      line-height: 22px;
       font-family: Comfortaa, Roboto, sans-serif;
       background-color: #cddc39;
       color: #fff;
