@@ -99,7 +99,7 @@ export default class Controller {
 
 	handleShowFavorite() {
 		if (this.images.length === 0) {
-			alert('Вы ничего не добавили в избранное')
+			alert('You have not added pictures to favorites')
 		}
 		this._view.refs.loadMoreBtn.classList.remove('visible')
 		this._view.refs.grid.textContent = '';
